@@ -1,0 +1,31 @@
+<div class="container mx-auto mt-3 pt-3">
+    <h2 class="text-center">Should I ..... ?</h2>
+    <div class="cssGrid">
+        <!-- pros box -->
+        <div class="mx-auto w-100 box">
+            <ul class="list-group">
+                <li [ngClass]="{active: activConsIndex == i}" class="list-group-item" *ngFor='let item of prosArray; let i = index' (click)="markAsActive('activConsIndex', i)">{{item}} 
+                    <i class="fa fa-trash" (click)="deleteItem('prosArray', i)" aria-hidden="true"></i> 
+                </li>
+            </ul>
+            <div class="d-flex align-items-center">
+                <input #prosInputValue type="text" class="form-control" placeholder="New Pro's">
+                <i class="fa fa-2x fa-plus-circle" (click)='addItem("prosArray", prosInputValue.value)' aria-hidden="true"></i>
+            </div>
+        </div>
+        <!-- cons box -->
+        <div class="mx-auto w-100 box">
+            <ul class="list-group">
+                <li [ngClass]="{active: activProsIndex == i}" class="list-group-item" *ngFor='let item of consArray; let i = index' (click)="markAsActive('activProsIndex', i)">{{item}} 
+                    <i class="fa fa-trash" (click)="deleteItem('consArray', i)" aria-hidden="true"></i> 
+                </li>
+            </ul>
+            <div class="d-flex align-items-center">
+                <input #consInputValue type="text" class="form-control" placeholder="New Con's">
+                <i class="fa fa-2x fa-plus-circle mr-2" (click)='addItem("consArray", consInputValue.value)' aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+

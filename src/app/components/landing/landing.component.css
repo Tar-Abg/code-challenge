@@ -1,0 +1,32 @@
+
+.cssGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+.cssGrid .box{
+    min-height: 80vh;
+    border: 1px dashed rgb(163, 163, 163);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+input {
+    border: none;
+    box-shadow: none !important;
+}
+.box div{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.fa-trash{
+    float: right;
+    cursor: pointer;
+}
+.fa-trash:hover{
+    color: rgb(206, 47, 47);
+}
+.fa-plus-circle{
+    color: rgb(82, 231, 52);
+    cursor: pointer;
+}
